@@ -5,15 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Phan Thai Phong | Portfolio</title>
 <style>
-/* === Harvard Dark Theme === */
 :root {
   --crimson: #a51c30;
   --gold: #f0c75e;
   --dark-bg: #1a1a1a;
   --light-text: #f5f5f5;
-  --gray: #b3b3b3;
+  --gray: #cccccc;
 }
-
 body {
   font-family: "Segoe UI", Roboto, sans-serif;
   margin: 0;
@@ -21,141 +19,65 @@ body {
   color: var(--light-text);
   scroll-behavior: smooth;
 }
-
-/* Navigation Bar */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(26, 26, 26, 0.95);
+  background-color: rgba(26,26,26,0.95);
   border-bottom: 2px solid var(--crimson);
   display: flex;
   justify-content: center;
   z-index: 1000;
 }
-
-nav ul {
-  list-style: none;
-  display: flex;
-  padding: 0;
-  margin: 0;
-}
-
-nav li {
-  margin: 0 20px;
-}
-
+nav ul { list-style:none; display:flex; padding:0; margin:0;}
+nav li { margin:0 20px;}
 nav a {
   color: var(--gold);
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  text-decoration:none;
+  font-weight:600;
+  letter-spacing:0.5px;
 }
-
-nav a:hover {
-  color: var(--light-text);
-}
-
-/* Sections */
+nav a:hover { color: var(--light-text);}
 section {
-  padding: 100px 15%;
-  min-height: 100vh;
+  padding:100px 15%;
+  min-height:100vh;
   animation: fadeIn 1.2s ease-in;
 }
-
 @keyframes fadeIn {
-  from {opacity: 0; transform: translateY(30px);}
-  to {opacity: 1; transform: translateY(0);}
+  from {opacity:0; transform:translateY(30px);}
+  to {opacity:1; transform:translateY(0);}
 }
-
-/* Header Section */
-#home {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-#home img {
-  border-radius: 50%;
-  width: 230px;
-  height: 230px;
-  object-fit: cover;
-  border: 4px solid var(--gold);
-  margin-top: 30px;
-}
-
-#home-text {
-  max-width: 600px;
-}
-
-#home h1 {
-  font-size: 2.8em;
-  color: var(--gold);
-}
-
-#home h2 {
-  color: var(--crimson);
-  margin-bottom: 10px;
-}
-
-/* About Section */
-#about h2, #projects h2, #contact h2 {
-  color: var(--gold);
-  border-left: 5px solid var(--crimson);
-  padding-left: 10px;
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-#about p {
-  line-height: 1.7em;
-  color: var(--gray);
-}
-
-/* Projects */
+h1,h2,h3 { color: var(--gold);}
+h2 { border-left:5px solid var(--crimson); padding-left:10px;}
+p,li { line-height:1.7em; color: var(--gray);}
 .project {
-  background-color: #2b2b2b;
-  border-left: 4px solid var(--crimson);
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 25px;
-  transition: transform 0.3s ease;
+  background-color:#2b2b2b;
+  border-left:4px solid var(--crimson);
+  padding:20px;
+  border-radius:10px;
+  margin-bottom:25px;
+  transition:transform 0.3s ease;
 }
-
-.project:hover {
-  transform: translateY(-5px);
-  background-color: #333;
-}
-
-.project h3 {
-  color: var(--gold);
-  margin-top: 0;
-}
-
-/* Contact */
-#contact a {
-  color: var(--gold);
-  text-decoration: none;
-}
-
-#contact a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
+.project:hover { transform:translateY(-5px); background-color:#333;}
 footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #111;
-  border-top: 1px solid #333;
-  color: var(--gray);
+  text-align:center;
+  padding:20px;
+  background-color:#111;
+  border-top:1px solid #333;
+  color:var(--gray);
 }
-
-@media (max-width: 768px) {
-  section { padding: 100px 10%; }
-  #home { flex-direction: column; text-align: center; }
-  #home img { margin-bottom: 20px; }
+#home { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap;}
+#home img {
+  border-radius:50%;
+  width:230px; height:230px; object-fit:cover;
+  border:4px solid var(--gold); margin-top:30px;
+}
+#home-text { max-width:600px;}
+#home h1 { font-size:2.8em;}
+@media(max-width:768px){
+  section{padding:100px 10%;}
+  #home{flex-direction:column; text-align:center;}
+  #home img{margin-bottom:20px;}
 }
 </style>
 </head>
@@ -165,7 +87,9 @@ footer {
   <ul>
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#research">Research & Work</a></li>
+    <li><a href="#social">Social</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -173,63 +97,96 @@ footer {
 <section id="home">
   <div id="home-text">
     <h1>Phan Thai Phong</h1>
-    <h2>Informatics Student | Yuan Ze University</h2>
-    <p>I am a passionate Computer Science student with interests in Artificial Intelligence, Machine Learning, and Big Data Analytics. My journey combines a background in Informatics and Economics, aiming to integrate both fields in future research and applications.</p>
+    <h3>Informatics Student | Yuan Ze University, Taiwan</h3>
+    <p>I am passionate about Computer Science and its intersection with Economics. 
+       My current studies in the International Bachelor Program in Informatics at Yuan Ze University 
+       allow me to explore Artificial Intelligence, Machine Learning, and Big Data Analysis, 
+       integrating computational and analytical thinking for future research.</p>
   </div>
   <img src="images/placeholder.jpg" alt="Profile Photo Placeholder">
 </section>
 
 <section id="about">
   <h2>About Me</h2>
-  <p>I am currently studying in the International Bachelor Program in Informatics at Yuan Ze University, Taiwan. I obtained my high school diploma from Duc Hoa High School, where I was part of the Informatics Excellence Team. My early exposure to programming sparked a deep passion for Computer Science.</p>
-  <p>Before transferring to Yuan Ze, I studied International Economics at Ho Chi Minh Open University. This background helps me combine analytical and computational perspectives, shaping my goal to explore AI-driven economic modeling and data analysis.</p>
+  <p>I am currently studying in the International Bachelor Program in Informatics at <strong>Yuan Ze University, Taiwan</strong>. 
+  I obtained my high school diploma from Duc Hoa High School, where I was part of the school’s Informatics Excellence Team. 
+  This experience allowed me to recognize my passion for Computer Science early and build a strong foundation in programming and logical thinking.</p>
 
-  <h3>Language Skills</h3>
-  <ul>
-    <li>Vietnamese – Native</li>
-    <li>English – Advanced (IELTS 7.0 / C1)</li>
-    <li>Chinese – Advanced Intermediate (TOCFL B1)</li>
-  </ul>
+  <p>Before my current program, I spent one year majoring in International Economics at Ho Chi Minh Open University. 
+  Although I enjoyed Economics, I realized that my greatest passion lies in Computer Science, while Economics remains a complementary field of interest. 
+  My goal is to integrate both disciplines in future research and applications.</p>
 
-  <h3>Social Engagement</h3>
+  <p>My research interests include <strong>Artificial Intelligence</strong>, <strong>Machine Learning</strong>, 
+  <strong>Deep Learning</strong>, and <strong>Big Data Analysis</strong>. I am particularly interested in training 
+  machine learning models and analyzing both historical and real-time market data.</p>
+
+  <h3>Language Abilities</h3>
   <ul>
-    <li><strong>Mid-Autumn Festival Event Coordination</strong> – Organized charity events supporting underprivileged children.</li>
-    <li><strong>Donation Campaign for Typhoon Yagi Victims</strong> – Mobilized volunteers and resources for disaster relief.</li>
+    <li>Vietnamese: Native</li>
+    <li>English: Advanced (IELTS 7.0 – C1)</li>
+    <li>Chinese: Advanced Intermediate (TOCFL B1)</li>
   </ul>
 </section>
 
-<section id="projects">
-  <h2>Projects</h2>
+<section id="achievements">
+  <h2>Rewards and Competitions</h2>
+  <ul>
+    <li>Achieved top entrance score at Duc Hoa High School with 29/30 points.</li>
+    <li>Member of the Informatics Excellence Team, participating in advanced training sessions.</li>
+  </ul>
+</section>
+
+<section id="research">
+  <h2>Research & Work</h2>
 
   <div class="project">
-    <h3>FaceTrack AI</h3>
-    <p>An intelligent system for detecting and tracking head poses using machine learning and computer vision. It can monitor student attention or automate attendance during exams.</p>
-    <p><strong>Main Technologies:</strong> Python, OpenCV, TensorFlow, NumPy</p>
+    <h3>1. FaceTrack AI: Intelligent Head Pose Detection for Smart Attendance and Exam Monitoring</h3>
+    <p>This project builds a system that automatically detects and tracks head poses using machine learning and computer vision. 
+    By analyzing facial landmarks and head orientation (yaw, pitch, roll), the model determines whether a student is attentive or distracted, 
+    and can automate attendance verification during exams.</p>
+    <p><strong>Main Programming Language:</strong> Python (OpenCV, TensorFlow, NumPy)</p>
+    <p><em>Applications:</em> Educational monitoring, automatic attendance, and behavior analysis in security contexts.</p>
   </div>
 
   <div class="project">
-    <h3>Personal GitHub Portfolio Website</h3>
-    <p>A web-based academic showcase designed to present personal information, academic achievements, and technical projects in a unified format.</p>
+    <h3>2. Personal GitHub Portfolio Website</h3>
+    <p>This project is a personal academic web platform designed to present my background, achievements, and projects in a unified format. 
+    It demonstrates my skills in HTML and CSS, and serves as an academic showcase for networking and professional communication.</p>
     <p><strong>Main Technologies:</strong> HTML, CSS</p>
   </div>
 
   <div class="project">
-    <h3>SmartFlash</h3>
-    <p>A Python console application for creating and reviewing flashcards. It helps users learn and memorize content efficiently, supporting quiz and shuffle features.</p>
-    <p><strong>Main Technology:</strong> Python</p>
+    <h3>3. SmartFlash: Interactive Flashcard Learning App</h3>
+    <p>A Python-based console application that helps users efficiently learn and memorize information. 
+    It allows users to create, view, and quiz themselves with flashcards, supporting randomization and score tracking.</p>
+    <p><strong>Main Programming Language:</strong> Python</p>
+    <p><em>Usage:</em> Ideal for studying languages, formulas, or general knowledge. I personally used it for preparing English and Chinese exams.</p>
   </div>
 </section>
 
+<section id="social">
+  <h2>Social Engagement</h2>
+  <ul>
+    <li><strong>"Trung thu cho em" – Mid-Autumn Festival Event Coordination:</strong> 
+      As Vice President, I helped organize annual events to provide gifts and support for underprivileged children in my community.</li>
+    <li><strong>Donation Campaign for Yagi Typhoon Victims:</strong> 
+      Collaborated in organizing donation drives for victims of Typhoon Yagi in Central Vietnam, mobilizing volunteers and resources for timely aid.</li>
+  </ul>
+</section>
+
 <section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:phongpt1705@gmail.com">phongpt1705@gmail.com</a></p>
+  <h2>Contact Information</h2>
+  <p>Email: <a href="mailto:phongpt1705@gmail.com" style="color:var(--gold);">phongpt1705@gmail.com</a></p>
   <p>Phone: 0983088395</p>
-  <p>Instagram: <a href="https://instagram.com/tfgno_02" target="_blank">@tfgno_02</a></p>
+  <p>Instagram: <a href="https://instagram.com/tfgno_02" target="_blank" style="color:var(--gold);">@tfgno_02</a></p>
 </section>
 
 <footer>
-  <p>© 2025 Phan Thai Phong | Designed with Harvard Spirit</p>
+  <p>© 2025 Phan Thai Phong | Designed in Harvard Crimson & Gold Theme</p>
 </footer>
 
 </body>
 </html>
+
+</html>
+
